@@ -1,0 +1,789 @@
+/* Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Poppins:wght@300;400;500&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: 0.2s linear;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+/* Button with bubble animation */
+.btn {
+  margin-top: 2rem;
+  width: 150px;
+  padding: 12px;
+  color: #fff;
+  background: tomato;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s ease-in-out;
+}
+
+
+
+.btn:hover {
+  background: rgba(212, 48, 48, 0.76);
+  animation: bubble 1s ease-in-out infinite;
+}
+
+@keyframes bubble {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.2rem 8%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #000;
+  justify-content: space-between;
+  box-shadow: 0px 5px 15px rgba(206, 204, 204, 0.3); /* Add box-shadow property */
+}
+
+
+@keyframes fadeInHeader {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Add this CSS to your existing styles */
+.header .logo {
+  font-size: 22px;
+  font-weight: bolder;
+  color: #fff;
+  padding-right: 10px;
+  margin-right: 20rem;
+  transition: transform 0.3s ease; /* Add a transition for the transform property */
+}
+
+.header .logo:hover {
+  transform: scale(1.3); /* Add a zoom effect on hover */
+}
+
+
+.header .logo i {
+  color: #fff;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+
+/* Add this CSS to your existing styles */
+.header .navbar a {
+  font-size: 1.1rem;
+  margin: 0 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add a transition for the transform property */
+}
+
+.header .navbar a:hover {
+  color: #baa6cf;
+  transform: scale(1.2); /* Add a zoom effect on hover */
+}
+
+
+.header .btn {
+  background: transparent;
+  color: tomato;
+  border: 0.5px solid tomato;
+  font-size: 1.1rem;
+  padding: 5px;
+  
+}
+
+
+
+/* Home Section */
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+section {
+  padding: 50px 0 50px 0;
+  height: 100vh;
+  
+}
+
+
+
+
+.home {
+  display: flex;
+  
+}
+
+.home .max-width {
+  width: 100%;
+  display: flex;
+}
+
+.home .home-content {
+  width: 45%; /* Adjusted content width */
+  padding: 2rem;
+  
+}
+
+
+.home .home-content a{
+  color: #fff;
+  
+}
+
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.home h3 {
+  color: #fff;
+  margin-top: 6rem;
+  font-size: 5rem;
+  font-family: 'Philosopher', sans-serif;
+}
+
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.typing-text::after {
+  content: '|'; /* Display the blinking cursor after the text */
+  animation: blink 0.8s step-end infinite; /* Apply the blinking animation */
+}
+
+
+
+
+#typing-text {
+  transition: opacity 0.3s ease-in-out; /* Add a smooth opacity transition */
+}
+
+
+@keyframes colorChange {
+  0% {
+    color: #ff6347;
+  }
+  50% {
+    color: #42a5f5;
+  }
+  100% {
+    color: #ff6347;
+  }
+}
+
+
+
+.home p {
+  color: rgb(194, 191, 191);
+  margin-top: 1rem;
+  font-size: 20px;
+  text-align: justify;
+}
+
+
+.home .home-image {
+  width: 55%; /* Adjusted image width */
+  overflow: hidden;
+  
+}
+
+/* Existing styles for .home .home-image */
+.home .home-image img {
+  width: 100%;
+  max-height: auto; /* Maintain image aspect ratio */
+  display: block;
+  margin-top: 10rem;
+  margin-left: 3rem;
+  transform: scale(1.4);
+  transition: transform 0.3s ease-in-out; /* Add the zoom transition effect */
+ 
+}
+
+/* Hover effect */
+.home .home-image:hover img {
+  transform: scale(1.5); /* Adjust the scale factor for the zoom level */
+}
+
+/* Initially hide the menu toggle on larger screens (PC) */
+.menu-toggle-container {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle i {
+  font-size: 1.5rem; /* Increase the icon size */  
+}
+
+.menu-toggle-container i {
+  transform: scale(1.5);
+  transition: transform 0.3s ease; /* Add a transition for the transform property */
+} 
+
+
+.menu-toggle-container i:hover {
+  transform: scale(1.8); /* Add a zoom effect on hover */
+} 
+
+
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Styles (up to 768px) */
+@media (max-width: 768px) {
+
+  .menu-toggle-container {
+    display: block;
+  }
+  
+  .menu-toggle i {
+    font-size: 2rem; /* Increase the icon size for the menu toggle */
+   
+  }
+
+  /* Initially hide the navigation menu on smaller screens */
+  .navbar {
+    display: none;
+    flex-direction: column; /* Display links in a column by default */
+    position: absolute;
+    top: 100%; /* Position below the header */
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    text-align: center; /* Center-align links */
+    z-index: 999; /* Ensure it's above other content */
+    border: 1px solid #fff; /* Increase border thickness */
+    padding-top: 5px; /* Add some padding to separate border from links */
+    background-color: rgba(0, 0, 0, 0.4); /* Set a darkened background color with transparency */
+    backdrop-filter: blur(5px);
+  }
+
+
+
+  /* Show the navigation menu as a column when .show-nav class is added */
+  .navbar.show-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align links when menu is shown */
+    justify-content: center; /* Center the links vertically */
+  }
+
+  /* Style for navigation links */
+  .navbar a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin: 10px auto; /* Adjust the margin to center and control spacing */
+    padding: 6px 7px;
+    width: auto; /* Allow links to expand to their content */
+    display: block; /* Display links as block elements */
+
+  }
+
+  /* Hide the "|" symbol */
+  .navbar a.Line {
+    display: none;
+  }
+
+
+
+  .menu-toggle-container {
+    display: block;
+  }
+  .header .logo {
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  .home h3 {
+    font-size: 2rem;
+  }
+
+  .home p {
+    color: rgb(194, 191, 191);
+    margin-top: 1rem;
+    font-size: 0.75em;
+    text-align: center;
+    width: 100%;
+    
+  }
+
+
+  /* Increase the size of the menu bar (hamburger icon) */
+  .header .menu-toggle i {
+    font-size: 24px; /* Adjust the font size as needed */
+  }
+
+  /* Increase the size of the logo */
+  .header .logo {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+
+  .header .navbar a {
+    font-size: 0.9rem;
+    margin: 8px 0;
+    padding: 6px 7px;
+    
+  }
+
+
+
+
+  .home .max-width {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .home .home-content {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: 0.875em;
+  }
+
+
+  .home .home-image {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .home .home-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transform: scale(1.2);
+  }
+
+  /* Hover effect */
+.home .home-image:hover img {
+  transform: scale(1.3); /* Adjust the scale factor for the zoom level */
+}
+
+
+  .home .home-content {
+    margin-top: -7rem;
+  }
+}
+
+
+
+/* ABOUT SECTION CSS */
+#about {
+  background-color: rgb(235, 235, 235);
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center;
+}
+
+#about h2 {
+  font-size: 40px; /* Adjust the font size as needed */
+  color: #000000;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  padding-top: 120px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.about-paragraph {
+  margin: 20px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  text-align: justify; /* Center the paragraph text */
+  margin-bottom: 2rem;
+}
+
+.about-images {
+  display: flex;
+  align-items: flex-start; /* Align items to the top of the container */
+  justify-content: space-between; /* Create space between images */
+  flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
+  margin: 20px;
+  
+}
+
+.about-image {
+  max-width: 48%; /* Adjust the max-width to leave space between images */
+  margin-bottom: 1px; /* Add margin between images */
+  box-shadow: 2px 10px 8px rgba(0, 0, 0, 0.2); /* Add box-shadow property */
+  
+}
+
+.image-about1 {
+  border: 3px solid #000;
+  width: 100%;
+  height: auto; /* Set a specific height */
+  object-fit: cover; /* This property ensures the image covers the entire container */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.image-about1:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #about h2 {
+    font-size: 1.875em; /* Adjust the font size as needed */
+    color: #000000;
+    margin-top: 3rem; /* Add margin to separate h2 from navbar */
+  }
+
+  .about-content {
+    padding: 1.5rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+.about-paragraph {
+  font-size: 12px;
+  text-align: justify;
+  margin-bottom: 0.8rem; /* Add margin at the bottom to separate the text from images */
+  margin-left: 0; /* Remove left margin */
+  margin-right: 0; /* Remove right margin */
+}
+
+
+  .about-images {
+    display: flex;
+    flex-direction: column; /* Stack images vertically on smaller screens */
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+  }
+
+  .about-image {
+    max-width: 100%; /* Allow images to occupy full width on smaller screens */
+
+  }
+}
+
+
+/* ABOUT SECTION CSS END */
+
+
+
+
+/* ABOUT SERVICE CSS */
+
+#service {
+  background-color: #000000;
+  padding: 5px;
+  text-align: center; /* Center content horizontally */
+  padding: 2rem;
+  overflow: hidden;
+  height: 100vh;
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  box-sizing: border-box;
+ 
+
+}
+
+
+.services-content {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+}
+
+.services-content h2{
+  font-size: 30px;
+  color: tomato;
+  margin-bottom: 2rem;
+  text-align: center;
+  margin-top: 0; /* Add this to remove the top margin */
+}
+
+.contact-content .title{
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.contact-content .title::after{
+  content: "";
+  height: 4px;
+  width: 230px;
+  background-color: #ffffff;
+  display: block;
+  margin: auto;
+  
+}
+
+
+
+#service p {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+}
+
+.services {
+  background-color: #fcfcfc;
+  width: 100%;
+  align-items: center;
+  margin: 0px 20px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow:  20px 20px rgba(253, 253, 253, 0.3); /* Darker shadow color */
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+
+.services:hover {
+  transform: scale(1.05); /* Scale the element up by 5% on hover */
+}
+
+
+.services .icons{
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+  #service p {
+    font-size: 0.6rem;
+    margin-top: 0; /* Remove negative margin */
+  }
+
+  .contact-content .title {
+    font-size: 1em;
+    margin-top: 0; /* Remove margin-top value */
+    margin-bottom: 0.5em;
+  }
+
+  .contact-content .title::after {
+    content: "";
+    height: 2px;
+    width: 150px;
+    background-color: #ffffff;
+    display: block;
+    margin: 0 auto; /* Correct the property name */
+  }
+
+  .services-content h2 {
+    font-size: 1.5em;
+  }
+
+  .services-content {
+    padding: 10px;
+    display: block; /* Change 'inline-block' to 'block' */
+    flex-direction: column; /* This property is not needed for 'display: block' */
+  }
+
+  .services {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 8px 0; /* Remove 'px' from margin value */
+    box-shadow: 12px 8px rgba(253, 253, 253, 0.3); /* Darker shadow color */
+  }
+}
+
+
+
+
+/* ABOUT SERVICE CSS END*/
+
+
+
+
+/* FOOTER CSS */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px;
+  
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social ul li {
+  margin-bottom: 10px;
+}
+
+.social ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social ul li a i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #555;
+  font-size: 0.9rem;
+}
+
+/* Responsive styles for tablets (up to 768px) */
+@media (max-width: 768px) {
+  .footer-section {
+    flex-basis: 10%; /* Two columns on tablets */
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  /* CSS for the social media icons in a column layout */
+  .social ul {
+    flex-direction: column; /* Display social media icons vertically */
+    align-items: center; /* Center align icons */
+  }
+  .social ul li a i {
+    
+    margin-right: 10px;
+  }
+}
+
+/* Responsive styles for mobile devices (up to 500px) */
+@media (max-width: 500px) {
+  .footer-section {
+    flex-basis: 100%; /* Single column on mobile */
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* CSS for the social media icons in a column layout */
+  .social ul {
+    flex-direction: row; /* Display social media icons horizontally */
+    justify-content: center; /* Center align icons */
+  }
+
+  .social ul li {
+    margin: 10px; /* Add spacing around icons */
+  }
+
+  .social ul li a i {
+    font-size: 24px;
+    margin-right: 10px; /* Remove horizontal margin to center the icons */
+  }
+
+  .footer-content {
+    flex-direction: column; /* Stack items vertically on small screens */
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin-bottom: 10px; /* Add space below logo */
+  }
+}
+
+ 

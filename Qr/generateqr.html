@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate QR Code</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="inputData" placeholder="Enter data to encode">
+        <button onclick="generateQR()">Generate QR Code</button>
+        <div id="qrCode"></div>
+        <a id="downloadLink" style="display: none;" download="qrcode.png">Download QR Code</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrious"></script>
+    <script>
+        function generateQR() {
+            var inputData = document.getElementById('inputData').value;
+            if (inputData.trim() === '') {
+                alert('Please enter data to encode.');
+                return;
+            }
+
+            var qr = new QRious({
+                value: inputData,
+                size: 300
+            });
+
+            // Send QR code data to the server
+            var imageData = qr.toDataURL();
+            saveQR(inputData, imageData); // Pass inputData along with the imageData
+        }
+
+        function saveQR(inputData, imageData) {
+            // Send AJAX request to save the image data
+            $.ajax({
+                url: '../save_qr.php', // Path to your PHP script for saving the QR code image
+                method: 'POST',
+                data: { inputData: inputData, imageData: imageData }, // Pass inputData to PHP script
+                success: function(response) {
+                    // Handle success response if needed
+                    if(response === "Success"){
+                        console.log('QR code saved successfully.');
+                    }
+                    else{
+                        alert(response);
+                    }
+                    
+                }
+            });
+        }
+
+
+    </script>
+</body>
+</html>
