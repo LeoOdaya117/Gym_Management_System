@@ -58,6 +58,18 @@ body {
     color: #ff6600;
 }
 
+.btn-login {
+    background: #ff6600;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-login:hover {
+    background: #cc5500;
+}
+
 /* Hero Section */
 .hero {
     background: url('https://source.unsplash.com/1600x900/?gym,fitness') center/cover no-repeat;
@@ -111,6 +123,25 @@ body {
     margin-top: 20px;
 }
 
+/* Showcase Section */
+.showcase-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.showcase-grid img {
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.showcase-grid img:hover {
+    transform: scale(1.05);
+}
+
 /* Features Grid */
 .features-grid {
     display: flex;
@@ -137,6 +168,17 @@ body {
     width: 80px;
     height: auto;
     margin-bottom: 10px;
+}
+
+/* Download Section */
+#download {
+    text-align: center;
+    padding: 60px 0;
+}
+
+#download .btn {
+    margin-top: 20px;
+    display: inline-block;
 }
 
 /* Contact Form */
@@ -173,4 +215,82 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+}
+
+/* Pricing Section */
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.pricing-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    color: #ff6600;
+}
+
+.pricing-card p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+}
+
+.pricing-card ul li:last-child {
+    border-bottom: none;
+}
+
+.pricing-card .btn {
+    margin-top: 15px;
+    display: inline-block;
+}
+
+/* Highlight Featured Plan */
+.featured {
+    background-color: #ff6600;
+    color: white;
+    transform: scale(1.05);
+}
+
+.featured h3 {
+    color: white;
+}
+
+.featured ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.featured .btn {
+    background: white;
+    color: #ff6600;
+}
+
+.featured .btn:hover {
+    background: #f0f0f0;
 }
