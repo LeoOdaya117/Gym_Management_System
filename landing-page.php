@@ -76,7 +76,7 @@
         <div class="container">
             <h2>Revolutionize Your Fitness Journey</h2>
             <p>Track progress, manage workouts, and achieve your fitness goals with Fitness App.</p>
-            <a href="#download" class="btn">Download App</a>
+            <a href="https://drive.google.com/file/d/1RP5JsgkhtBpRMqkpdLRzBaFpsouBlIdT/view?usp=sharing" target="_blank" class="btn">Download App</a>
         </div>
     </header>
 
